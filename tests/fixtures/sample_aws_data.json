@@ -1,0 +1,535 @@
+{
+    "instances": [
+        {
+            "InstanceId": "i-0abc123def456789a",
+            "InstanceType": "t3.xlarge",
+            "State": {
+                "Name": "running",
+                "Code": 16
+            },
+            "LaunchTime": "2025-06-01T00:00:00Z",
+            "Placement": {
+                "AvailabilityZone": "us-east-1a",
+                "Tenancy": "default"
+            },
+            "PrivateIpAddress": "10.0.1.100",
+            "PublicIpAddress": "54.123.45.67",
+            "VpcId": "vpc-12345678",
+            "SubnetId": "subnet-12345678",
+            "SecurityGroups": [
+                {
+                    "GroupId": "sg-12345678",
+                    "GroupName": "web-server-sg"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "web-server-1"
+                },
+                {
+                    "Key": "Environment",
+                    "Value": "development"
+                },
+                {
+                    "Key": "Team",
+                    "Value": "platform"
+                }
+            ],
+            "Architecture": "x86_64",
+            "Platform": "linux"
+        },
+        {
+            "InstanceId": "i-0bcd234efa567890b",
+            "InstanceType": "m5.2xlarge",
+            "State": {
+                "Name": "running",
+                "Code": 16
+            },
+            "LaunchTime": "2025-03-15T00:00:00Z",
+            "Placement": {
+                "AvailabilityZone": "us-east-1b",
+                "Tenancy": "default"
+            },
+            "PrivateIpAddress": "10.0.2.100",
+            "VpcId": "vpc-12345678",
+            "SubnetId": "subnet-23456789",
+            "SecurityGroups": [
+                {
+                    "GroupId": "sg-23456789",
+                    "GroupName": "api-server-sg"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "api-server-1"
+                },
+                {
+                    "Key": "Environment",
+                    "Value": "staging"
+                },
+                {
+                    "Key": "Team",
+                    "Value": "backend"
+                }
+            ],
+            "Architecture": "x86_64",
+            "Platform": "linux"
+        },
+        {
+            "InstanceId": "i-0cde345fab678901c",
+            "InstanceType": "t3.large",
+            "State": {
+                "Name": "running",
+                "Code": 16
+            },
+            "LaunchTime": "2025-09-01T00:00:00Z",
+            "Placement": {
+                "AvailabilityZone": "us-west-2a",
+                "Tenancy": "default"
+            },
+            "PrivateIpAddress": "10.1.1.50",
+            "VpcId": "vpc-87654321",
+            "SubnetId": "subnet-34567890",
+            "SecurityGroups": [
+                {
+                    "GroupId": "sg-34567890",
+                    "GroupName": "worker-sg"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "worker-node-1"
+                },
+                {
+                    "Key": "Environment",
+                    "Value": "development"
+                },
+                {
+                    "Key": "Team",
+                    "Value": "data"
+                }
+            ],
+            "Architecture": "x86_64",
+            "Platform": "linux"
+        },
+        {
+            "InstanceId": "i-0def456abc789012d",
+            "InstanceType": "r5.xlarge",
+            "State": {
+                "Name": "running",
+                "Code": 16
+            },
+            "LaunchTime": "2025-01-01T00:00:00Z",
+            "Placement": {
+                "AvailabilityZone": "us-east-1a",
+                "Tenancy": "default"
+            },
+            "PrivateIpAddress": "10.0.1.200",
+            "VpcId": "vpc-12345678",
+            "SubnetId": "subnet-12345678",
+            "SecurityGroups": [
+                {
+                    "GroupId": "sg-45678901",
+                    "GroupName": "database-sg"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "postgres-primary"
+                },
+                {
+                    "Key": "Environment",
+                    "Value": "production"
+                },
+                {
+                    "Key": "Team",
+                    "Value": "database"
+                },
+                {
+                    "Key": "Role",
+                    "Value": "database"
+                }
+            ],
+            "Architecture": "x86_64",
+            "Platform": "linux"
+        },
+        {
+            "InstanceId": "i-0ef567bcd890123e",
+            "InstanceType": "c5.xlarge",
+            "State": {
+                "Name": "stopped",
+                "Code": 80
+            },
+            "LaunchTime": "2025-05-01T00:00:00Z",
+            "Placement": {
+                "AvailabilityZone": "eu-west-1a",
+                "Tenancy": "default"
+            },
+            "PrivateIpAddress": "10.2.1.100",
+            "VpcId": "vpc-abcdef12",
+            "SubnetId": "subnet-56789012",
+            "SecurityGroups": [
+                {
+                    "GroupId": "sg-56789012",
+                    "GroupName": "batch-job-sg"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "batch-processor"
+                },
+                {
+                    "Key": "Environment",
+                    "Value": "development"
+                },
+                {
+                    "Key": "Team",
+                    "Value": "data"
+                }
+            ],
+            "Architecture": "x86_64",
+            "Platform": "linux"
+        }
+    ],
+    "metrics": {
+        "i-0abc123def456789a": {
+            "CPUUtilization": {
+                "datapoint_count": 8640,
+                "average": 15.2,
+                "average_max": 45.8,
+                "maximum": 52.3,
+                "p50": 12.1,
+                "p95": 28.5,
+                "p99": 42.1,
+                "raw_values": [
+                    12,
+                    15,
+                    18,
+                    14,
+                    11,
+                    16,
+                    20,
+                    25,
+                    30,
+                    22,
+                    18,
+                    14,
+                    10,
+                    8,
+                    6,
+                    5,
+                    4,
+                    5,
+                    8,
+                    12,
+                    18,
+                    22,
+                    25,
+                    20
+                ]
+            },
+            "NetworkIn": {
+                "datapoint_count": 8640,
+                "average": 1024000,
+                "sum": 8847360000
+            },
+            "NetworkOut": {
+                "datapoint_count": 8640,
+                "average": 512000,
+                "sum": 4423680000
+            }
+        },
+        "i-0bcd234efa567890b": {
+            "CPUUtilization": {
+                "datapoint_count": 8640,
+                "average": 8.5,
+                "average_max": 25.2,
+                "maximum": 32.1,
+                "p50": 6.2,
+                "p95": 18.3,
+                "p99": 28.5,
+                "raw_values": [
+                    5,
+                    8,
+                    10,
+                    7,
+                    6,
+                    8,
+                    12,
+                    15,
+                    18,
+                    14,
+                    10,
+                    8,
+                    6,
+                    5,
+                    4,
+                    3,
+                    3,
+                    4,
+                    6,
+                    8,
+                    12,
+                    15,
+                    18,
+                    12
+                ]
+            },
+            "NetworkIn": {
+                "datapoint_count": 8640,
+                "average": 2048000,
+                "sum": 17694720000
+            },
+            "NetworkOut": {
+                "datapoint_count": 8640,
+                "average": 1024000,
+                "sum": 8847360000
+            }
+        },
+        "i-0cde345fab678901c": {
+            "CPUUtilization": {
+                "datapoint_count": 8640,
+                "average": 22.8,
+                "average_max": 65.4,
+                "maximum": 78.2,
+                "p50": 18.5,
+                "p95": 55.2,
+                "p99": 72.1,
+                "raw_values": [
+                    15,
+                    20,
+                    25,
+                    30,
+                    35,
+                    40,
+                    45,
+                    50,
+                    55,
+                    45,
+                    35,
+                    25,
+                    18,
+                    12,
+                    10,
+                    8,
+                    8,
+                    12,
+                    18,
+                    25,
+                    35,
+                    45,
+                    55,
+                    40
+                ]
+            },
+            "NetworkIn": {
+                "datapoint_count": 8640,
+                "average": 512000,
+                "sum": 4423680000
+            },
+            "NetworkOut": {
+                "datapoint_count": 8640,
+                "average": 256000,
+                "sum": 2211840000
+            }
+        },
+        "i-0def456abc789012d": {
+            "CPUUtilization": {
+                "datapoint_count": 8640,
+                "average": 45.2,
+                "average_max": 82.5,
+                "maximum": 95.2,
+                "p50": 42.1,
+                "p95": 78.3,
+                "p99": 92.1,
+                "raw_values": [
+                    40,
+                    45,
+                    50,
+                    55,
+                    60,
+                    65,
+                    70,
+                    75,
+                    80,
+                    70,
+                    60,
+                    50,
+                    45,
+                    40,
+                    38,
+                    35,
+                    35,
+                    38,
+                    42,
+                    48,
+                    55,
+                    65,
+                    75,
+                    68
+                ]
+            },
+            "NetworkIn": {
+                "datapoint_count": 8640,
+                "average": 4096000,
+                "sum": 35389440000
+            },
+            "NetworkOut": {
+                "datapoint_count": 8640,
+                "average": 2048000,
+                "sum": 17694720000
+            }
+        },
+        "i-0ef567bcd890123e": {
+            "CPUUtilization": {
+                "datapoint_count": 2880,
+                "average": 3.2,
+                "average_max": 12.5,
+                "maximum": 15.8,
+                "p50": 2.1,
+                "p95": 8.3,
+                "p99": 12.1,
+                "raw_values": [
+                    2,
+                    3,
+                    4,
+                    3,
+                    2,
+                    2,
+                    3,
+                    5,
+                    8,
+                    6,
+                    4,
+                    2,
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    2,
+                    4,
+                    6,
+                    8,
+                    10,
+                    5
+                ]
+            },
+            "NetworkIn": {
+                "datapoint_count": 2880,
+                "average": 128000,
+                "sum": 368640000
+            },
+            "NetworkOut": {
+                "datapoint_count": 2880,
+                "average": 64000,
+                "sum": 184320000
+            }
+        }
+    },
+    "pricing": {
+        "t3.nano": {
+            "OnDemand": 0.0052,
+            "1yr_RI": 0.0036,
+            "3yr_RI": 0.0023
+        },
+        "t3.micro": {
+            "OnDemand": 0.0104,
+            "1yr_RI": 0.0072,
+            "3yr_RI": 0.0046
+        },
+        "t3.small": {
+            "OnDemand": 0.0208,
+            "1yr_RI": 0.0144,
+            "3yr_RI": 0.0092
+        },
+        "t3.medium": {
+            "OnDemand": 0.0416,
+            "1yr_RI": 0.0288,
+            "3yr_RI": 0.0184
+        },
+        "t3.large": {
+            "OnDemand": 0.0832,
+            "1yr_RI": 0.0576,
+            "3yr_RI": 0.0368
+        },
+        "t3.xlarge": {
+            "OnDemand": 0.1664,
+            "1yr_RI": 0.1152,
+            "3yr_RI": 0.0736
+        },
+        "t3.2xlarge": {
+            "OnDemand": 0.3328,
+            "1yr_RI": 0.2304,
+            "3yr_RI": 0.1472
+        },
+        "m5.large": {
+            "OnDemand": 0.096,
+            "1yr_RI": 0.0664,
+            "3yr_RI": 0.0424
+        },
+        "m5.xlarge": {
+            "OnDemand": 0.192,
+            "1yr_RI": 0.1328,
+            "3yr_RI": 0.0848
+        },
+        "m5.2xlarge": {
+            "OnDemand": 0.384,
+            "1yr_RI": 0.2656,
+            "3yr_RI": 0.1696
+        },
+        "m5.4xlarge": {
+            "OnDemand": 0.768,
+            "1yr_RI": 0.5312,
+            "3yr_RI": 0.3392
+        },
+        "c5.large": {
+            "OnDemand": 0.085,
+            "1yr_RI": 0.0588,
+            "3yr_RI": 0.0376
+        },
+        "c5.xlarge": {
+            "OnDemand": 0.17,
+            "1yr_RI": 0.1176,
+            "3yr_RI": 0.0752
+        },
+        "c5.2xlarge": {
+            "OnDemand": 0.34,
+            "1yr_RI": 0.2352,
+            "3yr_RI": 0.1504
+        },
+        "r5.large": {
+            "OnDemand": 0.126,
+            "1yr_RI": 0.0872,
+            "3yr_RI": 0.0556
+        },
+        "r5.xlarge": {
+            "OnDemand": 0.252,
+            "1yr_RI": 0.1744,
+            "3yr_RI": 0.1112
+        },
+        "r5.2xlarge": {
+            "OnDemand": 0.504,
+            "1yr_RI": 0.3488,
+            "3yr_RI": 0.2224
+        }
+    },
+    "regions": [
+        "us-east-1",
+        "us-east-2",
+        "us-west-1",
+        "us-west-2",
+        "eu-west-1",
+        "eu-west-2",
+        "eu-central-1",
+        "ap-south-1",
+        "ap-southeast-1",
+        "ap-northeast-1"
+    ]
+}
