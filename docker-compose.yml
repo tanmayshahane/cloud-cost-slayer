@@ -1,0 +1,46 @@
+# Cloud Cost Slayer - Docker Compose
+# Run both backend and frontend with: docker-compose up
+
+services:
+  # Python FastAPI Backend
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cloud-cost-slayer-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID:-}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY:-}
+      - AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN:-}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION:-us-east-1}
+    volumes:
+      # Mount AWS credentials if available
+      - ${HOME}/.aws:/root/.aws:ro
+      # Mount reports output directory
+      - ./reports:/app/reports
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/dashboard"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # Next.js Web Dashboard
+  frontend:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: cloud-cost-slayer-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:8000
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+# Development configuration (use with: docker-compose -f docker-compose.yml -f docker-compose.dev.yml up)

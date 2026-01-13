@@ -17,12 +17,42 @@
 
 ## Quick Start
 
-### Prerequisites
+### Option 1: Docker (Recommended) 🐳
+
+The easiest way to run Cloud Cost Slayer is with Docker:
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/cloud-cost-slayer.git
+cd cloud-cost-slayer
+
+# Start both backend and frontend
+docker-compose up --build
+
+# Open http://localhost:3000 in your browser
+```
+
+**AWS Credentials with Docker:**
+```bash
+# Option A: Use environment variables
+export AWS_ACCESS_KEY_ID=your-key
+export AWS_SECRET_ACCESS_KEY=your-secret
+docker-compose up
+
+# Option B: Mount your existing AWS credentials (automatic)
+# Docker Compose automatically mounts ~/.aws for credential access
+```
+
+---
+
+### Option 2: Manual Installation
+
+#### Prerequisites
 
 - Python 3.10 or higher
 - Node.js 18+ (for web dashboard)
 
-### Installation
+#### Installation
 
 ```bash
 # Clone the repository
@@ -38,7 +68,7 @@ source venv/bin/activate  # macOS/Linux
 pip install -r requirements.txt
 ```
 
-### Configure AWS Credentials
+#### Configure AWS Credentials
 
 ```bash
 # Option 1: Use existing AWS CLI profile

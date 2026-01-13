@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Build outputs
+.next/
+build/
+dist/
+*.egg
+
+# Development files
+.git/
+.gitignore
+.env
+.env.local
+*.md
+!README.md
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+tests/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local files
+reports/
+output/
+exports/
+docs/
+blueprint/
+*.log
+
+# Docker
+Dockerfile
+docker-compose*.yml
+.dockerignore

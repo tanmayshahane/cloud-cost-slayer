@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build
+.next/
+out/
+
+# Development
+*.md
+.git/
+.gitignore
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# Docker
+Dockerfile
+.dockerignore
